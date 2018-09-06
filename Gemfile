@@ -6,6 +6,7 @@ ruby '2.5.1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
+gem 'coveralls', require: false
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'less-rails'
@@ -36,6 +37,7 @@ group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
