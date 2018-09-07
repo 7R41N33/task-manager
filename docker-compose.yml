@@ -5,7 +5,9 @@ services:
     depends_on:
       - db
     volumes:
-      - .:/task_manager:cached
+      - ./:/task_manager:cached
+    working_dir: /task_manager
+    command: puma
     ports:
       - 3000:3000
     volumes_from:
