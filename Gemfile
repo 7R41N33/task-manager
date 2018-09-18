@@ -25,6 +25,8 @@ gem 'state_machines-activerecord'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
+gem 'webpacker', '~> 3.5'
+gem 'webpacker-react'
 
 group :development, :test do
   gem 'bullet'
