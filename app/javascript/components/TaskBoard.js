@@ -21,7 +21,7 @@ const data = {
   ]
 }
 
-export default class TasksBoard extends React.Component {
+export default class TaskBoard extends React.Component {
   render() {
     return <Board data={data} />
   }
