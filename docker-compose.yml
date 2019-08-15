@@ -1,24 +1,28 @@
-version: '2'
+version: '3'
 services:
   web:
     build: .
     depends_on:
       - db
     volumes:
-      - ./:/task_manager:cached
-    working_dir: /task_manager
-    command: puma
+      - .:/app:cached
+      - ~/.ssh:/root/.ssh
+      - ~/.bash_history:/root/.bash_history
+      - bundle_cache:/bundle_cache
     ports:
       - 3000:3000
-    volumes_from:
-      - bundle_cache
     environment:
       BUNDLE_PATH: /bundle_cache
       DATABASE_HOST: db
       DATABASE_USERNAME: postgres
+
   db:
-    image: postgres:10.3-alpine
+    image: postgres:10
+
   bundle_cache:
     image: busybox
     volumes:
       - /bundle_cache
+
+volumes:
+  bundle_cache:
