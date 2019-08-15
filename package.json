@@ -2,15 +2,22 @@
   "name": "task_manager",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
-    "babel-preset-react": "^6.24.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-trello": "^1.33.0",
+    "@rails/webpacker": "^4.0.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-trello": "^2.2.2",
+    "webpack": "^4.39.2",
     "webpacker-react": "^0.3.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "2.11.2"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "lint": "eslint app/javascript",
+    "lint-fix": "eslint --fix app/javascript"
   }
 }
